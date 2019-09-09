@@ -1,0 +1,73 @@
+.main-container{
+    max-width: 980px;
+    margin: 0 auto; /*Centraliza na tela*/
+    padding: 50px 0; /* Espaço embaixo e em cima */
+    text-align: center;
+}
+
+.main-container ul{
+    list-style: none; /* Tirar as bolindas das listas */
+    display: grid; /* Mostrar as imagens em um grid e nao uma embaixo da outra*/
+    grid-template-columns: repeat(3, 1fr); /* == 1fr 1fr 1fr para 3 colunas iguais*/
+    grid-gap: 30px;
+    margin-top: 50px; 
+}
+
+.main-container ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container ul li img{
+    max-width: 100%;/* Para ele ocupar só o máximo do tamanho da li */
+    border-radius: 5px 5px 0 0; /* cimaDireita cimaEsquerda BaixoDireita BaixoEsquerda  botando só em cima*/
+}
+
+.main-container ul li footer{
+    flex: 1; /* Pra os boteos dicarem no mesmo nivel independente do tamanho da descrição de todos os elementos da coluna*/
+    background: #FFF;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    text-align: left;
+    border-radius: 0 0 5px 5px; /* cimaDireita cimaEsquerda BaixoDireita BaixoEsquerda botando só em baixo*/
+}
+
+.main-container ul li footer strong{
+    font-size: 16px;
+    color: #333;
+}
+
+.main-container ul li footer p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.main-container ul li .buttons{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.main-container ul li .buttons button{
+    height: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05); /* verti horiz blur cor */
+    border: 0;
+    border-radius: 4px;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.main-container ul li .buttons button:hover img{
+    transform: translateY(-5px); /* Subir 5px */
+    transition: all 0.2s; /* transição em todos os atributos de 0.2 secs */
+}
+
+.empty{
+    font-size: 32px;
+    color: #999;
+    font-weight: bolder;
+    margin-top: 300px;
+}
